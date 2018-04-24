@@ -5,11 +5,11 @@ $ npm install express-generator -g
 ```
 Now that we have that installed let's generate our skeleton.  Express application generator supports several view template frameworks but we'll use Handlebars for it's simplicity and similarity to straight HTML.  We do that by specifying our view template as `hbs`
 ```
-$ express --view=hbs iiifdemo
+$ express --view=hbs postcard-flip
 ```
 That was simple! Let's install the dependencies now.
 ```
-$ cd iiifdemo
+$ cd postcard-flip
 $ npm install
 ```
 Finally we can start our application skeleton by running the following command
