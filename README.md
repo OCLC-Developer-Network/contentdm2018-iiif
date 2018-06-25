@@ -1,1 +1,1 @@
-# Welcome to OCLC DEVCONNECT 2018 IIIF Workshop
+# Welcome to OCLC CONTENTdm 2018 IIIF Workshop
