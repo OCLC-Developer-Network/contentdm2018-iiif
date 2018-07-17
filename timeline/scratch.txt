@@ -5,3 +5,10 @@ https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmGetCo
 
 https://cdm15717.contentdm.oclc.org/digital/iiif/p15717coll1/11/info.json
 https://cdm15717.contentdm.oclc.org/digital/iiif-info/p15717coll1/11/manifest.json
+
+https://cdm15717.contentdm.oclc.org/customizations/global/pages/collection.js
+https://cdm15717.contentdm.oclc.org/customizations/global/js/postcard.js
+https://cdm15717.contentdm.oclc.org/config
+
+https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/JavaScript_customizations/List_of_JavaScript_lifecycle_events
+https://timeline.knightlab.com/docs/instantiate-a-timeline.html
