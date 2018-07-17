@@ -11,7 +11,7 @@ document.convertJson = {};
     let convertToEvent = function(itemManifest) {
         return {
             'media' : {
-                'url' : itemManifest.sequences[0].canvases[0].images[0]['@id'],
+                'url' : itemManifest.sequences[0].canvases[0].images[0].resource['@id'],
                 'credit' : itemManifest.attribution['@value']
             },
             'start_date' : {
