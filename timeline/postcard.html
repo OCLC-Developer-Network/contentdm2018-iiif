@@ -1,0 +1,61 @@
+---
+header: false
+footer: false
+title: Postcard Flip
+---
+<style>
+body {
+    background: #cfd8dc;
+}
+
+.card-container {
+    font-family: 'Open Sans', sans serif;
+    font-size: 120px;
+    font-weight: bold;
+    width: 400px;
+    height: 250px;
+    margin: 80px auto;
+    border-radius: 10px;
+    perspective: 1400px;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    color: #2196f3;
+    background: #fff;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+</style>
+
+<div class="card-container">
+    <div class="card">
+        <div class="front">
+            <img src="https://dcpl.contentdm.oclc.org/digital/iiif/p17056coll3/186/full/380,230/0/default.jpg" />
+        </div>
+        <div class="back">
+            <img src="https://dcpl.contentdm.oclc.org/digital/iiif/p17056coll3/187/full/380,230/0/default.jpg" />
+        </div>
+    </div>
+</div>
+
