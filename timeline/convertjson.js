@@ -1,45 +1,37 @@
 document.convertJson = {};
 (function (context) {
-    let getMetadata = function(metadataArray, label) {
+    context.getMetadata = function(metadataArray, label) {
+        let elementValue = '';
         metadataArray.forEach(function(metadataElement) {
             if (metadataElement.label === label) {
-                return metadataElement.value;
+                elementValue = metadataElement.value;
             }
         })
+        return elementValue;
     };
 
-    let convertToEvent = function(itemManifest) {
+    context.convertToEvent = function(itemManifest) {
         return {
             'media' : {
                 'url' : itemManifest.sequences[0].canvases[0].images[0].resource['@id'],
                 'credit' : itemManifest.attribution['@value']
             },
             'start_date' : {
-                'year' : getMetadata(itemManifest.metadata, 'Date')
+                'year' : new Date(context.getMetadata(itemManifest.metadata, 'Date')).getFullYear()
             },
             'text' : {
-                'headline' : getMetadata(itemManifest.metadata, 'Title'),
-                'text' : getMetadata(itemManifest.metadata, "Description")
+                'headline' : context.getMetadata(itemManifest.metadata, 'Title'),
+                'text' : context.getMetadata(itemManifest.metadata, "Description")
             }
         }
     };
 
-    context.convert = function(collectionManifest) {
-        let timelineJson = {
-            'title' : {},
-            'events' : [
-            ]
-        }
-        return new Promise(function(resolve, reject) {
-            collectionManifest.members.forEach(function(element) {
-                fetch(element['@id'])
-                .then((resp) => resp.json())
-                .then(function(data) {
-                    timelineJson.events.push(convertToEvent(data))
-                });
-            });
-            resolve(timelineJson);
-        });
+    context.timelineJson = {
+        'title' : {},
+        'events' : []
+    }
 
+    context.convert = function(collectionManifestMember) {
+        return axios.get(collectionManifestMember['@id']);
     };
 })(document.convertJson);
