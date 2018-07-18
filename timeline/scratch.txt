@@ -1,4 +1,4 @@
-https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p15717coll1/rights^Indiana^all^and/title!demo!rights/demo/100/1/0/0/0/0/json
+https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p15717coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json
 
 https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmGetCollectionFieldInfo/p15717coll1/json
 
