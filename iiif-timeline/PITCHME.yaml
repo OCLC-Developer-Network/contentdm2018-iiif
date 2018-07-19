@@ -1,0 +1,14 @@
+
+theme : sky
+
+layout : center-right
+
+transition : none
+
+highlight : ir-black
+
+code-line-numbers : true
+
+published : true
+
+footnote : "CONTENTdm and IIIF - A Timeline"
