@@ -23,5 +23,14 @@
 #### OCLC Researcher
 #### mixterj@oclc.rog
 ---
-- You have a story to tell
-- IIIF can help! |
+@title[CONTENTdm and Timelines]
+## You have a story to tell!
+One of the more popular requested features for customization is implementing a timeline using your CONTENTdm data.
+---
+@title[CONTENTdm and IIIF]
+## CONTENTdm introduces IIIF Support
+Within the past year the CONTENTdm team has been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
+---
+@title[CONTENTdm and IIIF]
+## CONTENTdm Collection Manifests
+But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
