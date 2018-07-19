@@ -22,3 +22,6 @@
 ## Jeff Mixter
 #### OCLC Researcher
 #### mixterj@oclc.rog
+---
+## You have a story to tell
+## IIIF can help! |
