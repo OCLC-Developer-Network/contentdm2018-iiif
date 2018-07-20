@@ -41,12 +41,12 @@ But there is a gap currently that we will address with the help of Javascript, I
 @fa[arrow-down]
 
 +++
-```yaml
----
+```
+– – – 
 header: false
 footer: false
 title: Timeline Demo
----
+– – – 
 
 <div id='timeline-embed' style="width: 100%; height: 600px"></div>
 <style>
