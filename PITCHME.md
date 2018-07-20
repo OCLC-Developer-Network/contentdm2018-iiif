@@ -58,6 +58,9 @@ title: Timeline Demo
     }
 </style>
 ```
+@[1-5](Custom pages start with a YAML-like header)
+@[8-15](We then add a little CSS to remove some artifacts)
+@[7](Finally we create a placeholder for our timeline.)
 
 +++?code=iiif-timeline/step1/iiifbootstrap.js&lang=javascript&title=Source: Custom JS
 
