@@ -34,3 +34,21 @@ Within the past year the CONTENTdm team has been excited to bring every hosted C
 @title[CONTENTdm and IIIF]
 ## CONTENTdm Collection Manifests
 But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
+---
+@title[Some Groundwork]
+## First we need to lay down a foundation
+
+@fa[arrow-down]
+
++++?code=step1/timeline.html&lang=html&title=Source: Custom CONTENTdm Page
+
+@[1-5](Custom pages start with a YAML-like header)
+@[8-15](We then add a little CSS to remove some artifacts)
+@[7](Finally we create a placeholder for our timeline.)
+
++++?code=step1/iiifbootstrap.js&lang=javascript&title=Source: Custom JS
+
+@[1-18](A script loader that will inject our JS into the HTML header)
+@[20,26](Then we add our CONTENTdm javascript lifecycle event listener)
+@[21,25](We only want this code to run on our timeline page!)
+@[22-24](For convenience we'll inject the axios library for HTTP requests)

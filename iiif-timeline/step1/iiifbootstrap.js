@@ -19,6 +19,8 @@ function ScriptLoader(url, callback){
 
 document.addEventListener('cdm-custom-page:ready', function(e) {
     if (document.location.pathname.endsWith('timeline')) {
+        ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
 
+        });
     }
 });
