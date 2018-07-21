@@ -20,6 +20,9 @@ function ScriptLoader(url, callback){
 document.addEventListener('cdm-custom-page:ready', function(e) {
     if (document.location.pathname.endsWith('timeline')) {
 
+        /*
+        * Helper functions
+        */
         let createCollectionManifest = function() {
             return {
                 '@context' : 'http://iiif.io/api/presentation/2/context.json',
@@ -32,6 +35,7 @@ document.addEventListener('cdm-custom-page:ready', function(e) {
             };
         }
 
+        // Create a IIIF Collection Manifest member from a CONTENTdm dmQuery API item record
         let createMember = function(record) {
             return {
                 '@id' : 'https://cdm15717.contentdm.oclc.org/digital/iiif-info' + record.collection + '/' + record.pointer + '/manifest.json',
@@ -40,6 +44,9 @@ document.addEventListener('cdm-custom-page:ready', function(e) {
             };
         };
 
+        /*
+        * Main execution
+        */
         ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
             axios.get('https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p15717coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json')
             .then(function(response) {
@@ -47,7 +54,17 @@ document.addEventListener('cdm-custom-page:ready', function(e) {
                 response.data.records.forEach(function(record) {
                     collectionManifest.members.push(createMember(record));
                 });
-                document.getElementById('timeline-embed').innerHTML = '<pre>' + JSON.stringify(collectionManifest,null,2);
+
+                let promises = [];
+                collectionManifest.members.forEach(function(collectionManifestMember) {
+                    promises.push(axios.get(collectionManifestMember['@id']));
+                });
+
+                axios.all(promises).then(function(results){
+                    results.forEach(function(response){
+                    
+                    });
+                });
             }).catch(function(error) {
                 console.log(error);
             });
