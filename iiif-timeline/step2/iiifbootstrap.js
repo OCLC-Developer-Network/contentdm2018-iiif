@@ -17,8 +17,8 @@ function ScriptLoader(url, callback){
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-document.addEventListener('cdm-custom-page:ready', function(e) {
-    if (document.location.pathname.endsWith('timeline')) {
+document.addEventListener('cdm-custom-page:ready', function(event) {
+    if (event.detail.filename.endsWith('timeline')) {
 
         let createCollectionManifest = function() {
             return {
