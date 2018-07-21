@@ -68,3 +68,20 @@ title: Timeline Demo
 @[20,26](Then we add our CONTENTdm javascript lifecycle event listener)
 @[21,25](We only want this code to run on our timeline page!)
 @[22-24](For convenience we'll inject the axios library for HTTP requests)
+
+---
+@title[Creating the IIIF collection manifest]
+## Creating the collection manifest
+Now that we have a blank slate to work from and a helpful Javascript HTTP client loaded we can start writing the code to create the IIIF Collection Manifest
+
++++?code=iiif-timeline/step2/iiifbootstrap.js&lang=javascript&title=Source: Collection Manifest
+
+@[23-33](We create a function to make the JSON object that will be the base of our collection manifest)
+@[35-41](Next we make a small function that will be used to make each of the member JSON objects which will be added to the member array)
+@[31](The member array is in our collection manifest JSON object)
+@[44,50](Make an HTTP call to our CONTENTdm dmQuery API to get our items.  This returns a Promise)
+@[45,50](We call the ".then()" method on the Promise. This will execute when the HTTP call is complete)
+@[46](Call our previously created function to make our base collection manifest JSON object)
+@[47,49](Loop through each of the item records that are returned from our CONTENTdm dmQuery API)
+@[47-49](Call the createMember method on each record and add it to the manifest member array)
+
