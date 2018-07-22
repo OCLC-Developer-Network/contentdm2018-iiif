@@ -119,11 +119,13 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 Our hard work is paying off now.  We just have a few more things to do in order to get our timeline embedded into our custom page.
 
 +++?code=iiif-timeline/step4/iiifbootstrap.js&lang=javascript&title=Source: TimelineJS
+@[95](First thing's first.  We need to add one more ScriptLoader to pull in the TimelineJS library)
+@[96-100](We also want to inject the TimelineJS CSS file into the <head> of our document)
 @[114-118,125](We create a TimelineJS JSON object with a title slide and an empty events array)
 @[59-73](Recall we created a function to convert an item manifest into a TimelineJS event)
 @[114,120-121,123,125](Here we will use that function to convert each IIIF manifest into a single timeline event)
 @[114,120-123,125](Then we push each event into our TimelineJS JSON event array)
-@[114-125](Success is ours! We can call our TimelineJS code snippit and pass in our carefully constructed Timeline JS JSON object)
+@[124](Success is ours! We can call our TimelineJS code snippit and pass in our carefully constructed Timeline JS JSON object)
 
 +++
 @title[Demo]
