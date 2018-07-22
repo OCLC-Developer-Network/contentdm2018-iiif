@@ -40,7 +40,7 @@ But there is a gap currently that we will address with the help of Javascript, I
 
 @fa[arrow-down]
 
-+++
++++?title=Source:timeline.html
 ```
 – – – 
 header: false
@@ -73,7 +73,9 @@ title: Timeline Demo
 @title[Creating the IIIF collection manifest]
 ## Creating the collection manifest
 Now that we have a blank slate to work from and a helpful Javascript HTTP client loaded we can start writing the code to create the IIIF Collection Manifest
+
 @fa[arrow-down]
+
 +++?code=iiif-timeline/step2/iiifbootstrap.js&lang=javascript&title=Source: Collection Manifest
 
 @[23-33](We create a function to make the JSON object that will be the base of our collection manifest)
