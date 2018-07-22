@@ -25,7 +25,15 @@
 ---
 @title[CONTENTdm and Timelines]
 ## You have a story to tell!
-One of the more popular requested features for customization is implementing a timeline using your CONTENTdm data.
+One of the more popular requested customizations is a timeline using your CONTENTdm data.
+---
+@title[Grooming Your Content]
+## A metadata interlude
+Your record descriptions will drive this timeline.
++++
+@title[Some Field Notes]
+## You'll need a few fields
+Date, Title, Caption, Attribution
 ---
 @title[CONTENTdm and IIIF]
 ## CONTENTdm introduces IIIF Support
@@ -42,11 +50,11 @@ But there is a gap currently that we will address with the help of Javascript, I
 
 +++?title=Source:timeline.html
 ```
-– – – 
+– – –
 header: false
 footer: false
 title: Timeline Demo
-– – – 
+– – –
 
 <div id='timeline-embed' style="width: 100%; height: 600px"></div>
 <style>
@@ -94,8 +102,8 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 @title[Promises]
 ## Javascript Promises
 
-> The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. 
-> 
+> The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+>
 > – MDN Web Docs
 
 @fa[arrow-down]
