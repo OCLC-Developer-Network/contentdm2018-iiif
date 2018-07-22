@@ -20,8 +20,8 @@
 +++
 @title[Jeff Mixter]
 ## Jeff Mixter
-#### OCLC Researcher
-#### mixterj@oclc.rog
+#### Software Engineer, OCLC Research
+#### mixterj@oclc.org
 ---
 @title[CONTENTdm and Timelines]
 ## You have a story to tell!
