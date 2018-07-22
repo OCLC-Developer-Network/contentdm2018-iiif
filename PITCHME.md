@@ -106,8 +106,25 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 
 +++
 ![All the promises](https://i.imgflip.com/2egvk6.jpg)
+
 @fa[arrow-down]
 
 +++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: All the promises
 @[63,67](Axios allows us to call ".all" on our array of promises and only after ALL of them are complete will it enter the ".then()" block)
 @[63-67](Each axios GET call is placed in a separate response in the results array which we can loop through one at a time.)
+
+---
+@title[Finally a timeline]
+## Finally a timeline
+Our hard work is paying off now.  We just have a few more things to do in order to get our timeline embedded into our custom page.
+
++++?code=iiif-timeline/step4/iiifbootstrap.js&lang=javascript&title=Source: TimelineJS
+@[114-118,125](We create a TimelineJS JSON object with a title slide and an empty events array)
+@[59-73](Recall we created a function to convert an item manifest into a TimelineJS event)
+@[114,120-121,123,125](Here we will use that function to convert each IIIF manifest into a single timeline event)
+@[114,120-123,125](Then we push each event into our TimelineJS JSON event array)
+@[114-125](Success is ours! We can call our TimelineJS code snippit and pass in our carefully constructed Timeline JS JSON object)
+
++++
+@title[Demo]
+## Demo
