@@ -33,7 +33,14 @@ Your record descriptions will drive this timeline.
 +++
 @title[Some Field Notes]
 ## You'll need a few fields
-Date, Title, Caption, Attribution
+@color[yellow](Title) Consider the length.
+@color[yellow](Date) Useful for sorting. It will be prominent.
+@color[yellow](Caption) Could be "Description" or something custom.
+@color[yellow](Attribution) Rights statement to display.
++++
+@title[Ordering the Sneaky Way]
+## Force the order with a dedicated field
+Create a timeline sequence field to have complete control over the slide order.
 ---
 @title[CONTENTdm and IIIF]
 ## CONTENTdm introduces IIIF Support
