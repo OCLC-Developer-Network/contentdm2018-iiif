@@ -73,7 +73,7 @@ title: Timeline Demo
 @title[Creating the IIIF collection manifest]
 ## Creating the collection manifest
 Now that we have a blank slate to work from and a helpful Javascript HTTP client loaded we can start writing the code to create the IIIF Collection Manifest
-
+@fa[arrow-down]
 +++?code=iiif-timeline/step2/iiifbootstrap.js&lang=javascript&title=Source: Collection Manifest
 
 @[23-33](We create a function to make the JSON object that will be the base of our collection manifest)
@@ -85,3 +85,25 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 @[45-47,49,51-53](Loop through each of the item records that are returned from our CONTENTdm dmQuery API)
 @[45-49,51-53](Call the createMember method on each record and add it to the manifest member array)
 
++++
+@title[Demo]
+## Demo
+---
+@title[Promises]
+## Javascript Promises
+> The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. 
+> – MDN Web Docs
+@fa[arrow-down]
++++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: Promises
+
+@[58](Declare an array where we'll be storing our eventual promises)
+@[58-59,61](We need to loop through our IIIF collection manifest members that we've created)
+@[60](Push each axios call return into our array of promises.  Each axios call will perform a GET on a collection manifest item URL)
+
++++
+![All the promises](https://imgflip.com/i/2egvk6)
+@fa[arrow-down]
+
++++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: All the promises
+@[63,67](Axios allows us to call ".all" on our array of promises and only after ALL of them are complete will it enter the ".then()" block)
+@[63-67](Each axios GET call is placed in a separate response in the results array which we can loop through one at a time.)
