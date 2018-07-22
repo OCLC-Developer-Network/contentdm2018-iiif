@@ -91,9 +91,13 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 ---
 @title[Promises]
 ## Javascript Promises
+
 > The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. 
+> 
 > – MDN Web Docs
+
 @fa[arrow-down]
+
 +++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: Promises
 
 @[58](Declare an array where we'll be storing our eventual promises)
@@ -101,7 +105,7 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 @[60](Push each axios call return into our array of promises.  Each axios call will perform a GET on a collection manifest item URL)
 
 +++
-![All the promises](https://imgflip.com/i/2egvk6)
+![All the promises](https://i.imgflip.com/2egvk6.jpg)
 @fa[arrow-down]
 
 +++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: All the promises
