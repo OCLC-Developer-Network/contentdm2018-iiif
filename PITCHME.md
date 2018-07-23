@@ -100,6 +100,13 @@ title: Timeline Demo
 @[8-15](We then add a little CSS to remove some artifacts)
 @[7](Finally we create a placeholder for our timeline.)
 
+---
+@title[Some more groundwork]
+## More groundwork
+Our next piece will be a custom script that will be loaded in the <head> of our CONTENTdm site from the Custom Scripts option in the WCT global meny.  We'll name ours iiifbootstrap.js
+
+@fa[arrow-down]
+
 +++?code=iiif-timeline/step1/iiifbootstrap.js&lang=javascript&title=Source: Custom JS
 
 @[1-18](A script loader that will inject our JS into the HTML header)
