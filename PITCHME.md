@@ -3,7 +3,7 @@
 #### Welcome to the 2018 CONTENTdm IIIF Workshop
 ---
 @title[Introduction Redux]
-## A little about us!
+## A little about me!
 @fa[arrow-down]
 +++
 @title[Dave Collins]
@@ -11,9 +11,8 @@
 #### Consulting Software Engineer, OCLC
 #### collinsd@oclc.org
 
-@fa[arrow-down]
-
 ---
+
 @title[CONTENTdm and Timelines]
 ## You have a story to tell!
 One of the more popular requested customizations is a timeline using your CONTENTdm data.
@@ -69,8 +68,17 @@ But there is a gap currently that we will address with the help of Javascript, I
 @fa[arrow-down]
 
 +++
+@title[A timeline on a custom page]
+## A timeline on a custom page
+CONTENTdm has given site authors the ability to add custom pages.  That's where we want to add our timeline for this demo.  We'll name the file timeline.html and follow the CONTENTdm custom page file format.
 
+<https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/Custom_pages>
+
+@fa[arrow-down]
+
++++
 @title[Source: timeline.html]
+#### Source: timeline.html
 ```
 – – –
 header: false
