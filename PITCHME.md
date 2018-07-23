@@ -10,27 +10,22 @@
 ## Dave Collins
 #### Consulting Software Engineer, OCLC
 #### collinsd@oclc.org
+
 @fa[arrow-down]
-+++
-@title[Shane Huddleston]
-## Shane Huddleston
-#### CONTENTdm Product Manager
-#### huddless@oclc.org
-@fa[arrow-down]
-+++
-@title[Jeff Mixter]
-## Jeff Mixter
-#### Software Engineer, OCLC Research
-#### mixterj@oclc.org
+
 ---
 @title[CONTENTdm and Timelines]
 ## You have a story to tell!
 One of the more popular requested customizations is a timeline using your CONTENTdm data.
+
 ---
+
 @title[Grooming Your Content]
 ## A metadata interlude
 Your record descriptions will drive this timeline.
+
 +++
+
 @title[Some Field Notes]
 ## You'll need a few fields
 @ul[squares]
@@ -39,29 +34,42 @@ Your record descriptions will drive this timeline.
 - @color[yellow](Caption) "**Description**" or custom caption.  
 - @color[yellow](Attribution) Rights statement to display.  
 @ulend
+
 +++
+
 @title[Ordering the Sneaky Way]
 ## Force the order with a dedicated field
 Create a **Timeline Sequence** field to have complete control over the slide order.
+
 +++
+
 @title[Thank you, Destination Indiana]
 ## Special thanks to Indiana Historical Society
 We used content from their **Destination Indiana** portal for this demo and they have a wealth of fantastic, contextualized content. See <https://www.destination-indiana.com>.
+
 ---
+
 @title[CONTENTdm and IIIF]
 ## CONTENTdm brings IIIF support
 Within the past year we have been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
+
 ---
+
 @title[CONTENTdm and IIIF]
 ## We need Collection manifests
 But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
+
+<http://iiif.io/api/presentation/2.0/#collections>
+
 ---
+
 @title[Some Groundwork]
 ## First we need to lay down a foundation
 
 @fa[arrow-down]
 
 +++
+
 @title[Source: timeline.html]
 ```
 – – –
