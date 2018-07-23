@@ -61,8 +61,8 @@ But there is a gap currently that we will address with the help of Javascript, I
 
 @fa[arrow-down]
 
-+++?title=Source:timeline.html
-@title[Prepare the HTML]
++++
+@title[Source: timeline.html]
 ```
 – – –
 header: false
