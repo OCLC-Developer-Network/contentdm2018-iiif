@@ -33,18 +33,24 @@ Your record descriptions will drive this timeline.
 +++
 @title[Some Field Notes]
 ## You'll need a few fields
-* @color[yellow](Title) Consider the length.  
-* @color[yellow](Date) Useful for sorting. It will be prominent.  
-* @color[yellow](Caption) Could be "Description" or something custom.  
-* @color[yellow](Attribution) Rights statement to display.  
+@ul[squares]
+- @color[yellow](Title) Consider the length.  
+- @color[yellow](Date) Useful for sorting. It will be prominent.  
+- @color[yellow](Caption) "**Description**" or custom caption.  
+- @color[yellow](Attribution) Rights statement to display.  
+@ulend
 +++
 @title[Ordering the Sneaky Way]
 ## Force the order with a dedicated field
 Create a **Timeline Sequence** field to have complete control over the slide order.
++++
+@title[Thank you, Destination Indiana]
+## Special thanks to Indiana Historical Society
+We used content from their **Destination Indiana** portal for this demo and they have a wealth of fantastic, contextualized content. See <https://www.destination-indiana.com>.
 ---
 @title[CONTENTdm and IIIF]
 ## CONTENTdm introduces IIIF Support
-Within the past year the CONTENTdm team has been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
+Within the past year we have been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
 ---
 @title[CONTENTdm and IIIF]
 ## CONTENTdm Collection Manifests
@@ -56,6 +62,7 @@ But there is a gap currently that we will address with the help of Javascript, I
 @fa[arrow-down]
 
 +++?title=Source:timeline.html
+@title[Prepare the HTML]
 ```
 – – –
 header: false
