@@ -49,11 +49,11 @@ Create a **Timeline Sequence** field to have complete control over the slide ord
 We used content from their **Destination Indiana** portal for this demo and they have a wealth of fantastic, contextualized content. See <https://www.destination-indiana.com>.
 ---
 @title[CONTENTdm and IIIF]
-## CONTENTdm introduces IIIF Support
+## CONTENTdm brings IIIF support
 Within the past year we have been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
 ---
 @title[CONTENTdm and IIIF]
-## CONTENTdm Collection Manifests
+## We need Collection manifests
 But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
 ---
 @title[Some Groundwork]
@@ -122,13 +122,14 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 
 @fa[arrow-down]
 
-+++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript&title=Source: Promises
++++?code=iiif-timeline/step3/iiifbootstrap.js&lang=javascript?&title=Source: Promises
 
 @[58](Declare an array where we'll be storing our eventual promises)
 @[58-59,61](We need to loop through our IIIF collection manifest members that we've created)
 @[60](Push each axios call return into our array of promises.  Each axios call will perform a GET on a collection manifest item URL)
 
 +++
+@title[All the promises]
 ![All the promises](https://i.imgflip.com/2egvk6.jpg)
 
 @fa[arrow-down]
