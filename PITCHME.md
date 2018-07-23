@@ -131,7 +131,7 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 +++
 @title[All the promises]
 ![All the promises](https://i.imgflip.com/2egvk6.jpg)
-@size[x-small](image from *Hyperbole and a Half* by Allie Brosh)
+- @size[x-small](image from *Hyperbole and a Half* by Allie Brosh)
 
 @fa[arrow-down]
 
