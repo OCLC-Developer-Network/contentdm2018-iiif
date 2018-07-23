@@ -103,7 +103,7 @@ title: Timeline Demo
 ---
 @title[Some more groundwork]
 ## More groundwork
-Our next piece will be a custom script that will be loaded in the <head> of our CONTENTdm site from the Custom Scripts option in the WCT global meny.  We'll name ours iiifbootstrap.js
+Our next piece will be a custom script that will be loaded in the &lt;head&gt; of our CONTENTdm site from the Custom Scripts option in the WCT global meny.  We'll name ours iiifbootstrap.js
 
 @fa[arrow-down]
 
