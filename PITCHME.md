@@ -114,6 +114,10 @@ Our next piece will be a custom script that will be loaded in the &lt;head&gt; o
 @[21,25](We only want this code to run on our timeline page!)
 @[22-24](For convenience we'll inject the axios library for HTTP requests)
 
+Note:
+- One of the limitations of custom scripts in the WCT is that we only allow one script to be loaded.  We want to load many scripts though which is why we've created this ScriptLoader
+- The axios library works on IE11 whereas fetch() does not
+
 ---
 @title[Creating the IIIF collection manifest]
 ## Creating the collection manifest
