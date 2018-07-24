@@ -171,6 +171,8 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 ## Finally a timeline
 Our hard work is paying off now.  We just have a few more things to do in order to get our timeline embedded into our custom page.
 
+![Knightlab](iiif-timeline/images/knightlab-dark.png)
+
 +++?code=iiif-timeline/step4/iiifbootstrap.js&lang=javascript&title=Source: TimelineJS
 @[95](First thing's first.  We need to add one more ScriptLoader to pull in the TimelineJS library)
 @[96-100](We also want to inject the TimelineJS CSS file into the <head> of our document)
