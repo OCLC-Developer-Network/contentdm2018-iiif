@@ -130,7 +130,7 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 @[23-33](We create a function to make the JSON object that will be the base of our collection manifest)
 @[35-41](Next we make a small function that will be used to make each of the member JSON objects which will be added to the member array)
 @[31](The member array is in our collection manifest JSON object)
-@[44,51-53](Make an HTTP call to our CONTENTdm dmQuery API to get our items.  This returns a Promise)
+@[44,51-53](Make an HTTP call to our [CONTENTdm dmQuery API](https://www.oclc.org/support/services/contentdm/help/customizing-website-help/other-customizations/contentdm-api-reference/dmquery.en.html) to get our items.  This returns a Promise)
 @[45,51-53](We call the ".then()" method on the Promise. This will execute when the HTTP call is complete)
 @[45-46,51-53](Call our previously created function to make our base collection manifest JSON object)
 @[45-47,49,51-53](Loop through each of the item records that are returned from our [CONTENTdm dmQuery API](https://www.oclc.org/support/services/contentdm/help/customizing-website-help/other-customizations/contentdm-api-reference/dmquery.en.html))
