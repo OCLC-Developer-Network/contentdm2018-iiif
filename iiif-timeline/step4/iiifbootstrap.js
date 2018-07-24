@@ -113,7 +113,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
 
                     axios.all(promises).then(function(results){
                         let timelineJson = {
-                            'title' : {'text': 'CONTENTdm IIIF Timeline Demo'},
+                            'title' : {'text': {'headline' : 'CONTENTdm IIIF Timeline Demo'}},
                             'events' : []
                         };
 
