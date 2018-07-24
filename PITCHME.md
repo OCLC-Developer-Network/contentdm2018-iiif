@@ -3,34 +3,28 @@
 #### Welcome to the 2018 CONTENTdm IIIF Workshop
 ---
 @title[Introduction Redux]
-## A little about us!
+## A little about me!
 @fa[arrow-down]
 +++
 @title[Dave Collins]
 ## Dave Collins
 #### Consulting Software Engineer, OCLC
 #### collinsd@oclc.org
-@fa[arrow-down]
-+++
-@title[Shane Huddleston]
-## Shane Huddleston
-#### CONTENTdm Product Manager
-#### huddless@oclc.org
-@fa[arrow-down]
-+++
-@title[Jeff Mixter]
-## Jeff Mixter
-#### Software Engineer, OCLC Research
-#### mixterj@oclc.org
+
 ---
+
 @title[CONTENTdm and Timelines]
 ## You have a story to tell!
 One of the more popular requested customizations is a timeline using your CONTENTdm data.
+
 ---
+
 @title[Grooming Your Content]
 ## A metadata interlude
 Your record descriptions will drive this timeline.
+
 +++
+
 @title[Some Field Notes]
 ## You'll need a few fields
 @ul[squares]
@@ -39,30 +33,52 @@ Your record descriptions will drive this timeline.
 - @color[yellow](Caption) "**Description**" or custom caption.  
 - @color[yellow](Attribution) Rights statement to display.  
 @ulend
+
 +++
+
 @title[Ordering the Sneaky Way]
 ## Force the order with a dedicated field
 Create a **Timeline Sequence** field to have complete control over the slide order.
+
 +++
+
 @title[Thank you, Destination Indiana]
 ## Special thanks to Indiana Historical Society
 We used content from their **Destination Indiana** portal for this demo and they have a wealth of fantastic, contextualized content. See <https://www.destination-indiana.com>.
+
 ---
+
 @title[CONTENTdm and IIIF]
 ## CONTENTdm brings IIIF support
 Within the past year we have been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
+
 ---
+
 @title[CONTENTdm and IIIF]
 ## We need Collection manifests
 But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
+
+<http://iiif.io/api/presentation/2.0/#collections>
+
 ---
+
 @title[Some Groundwork]
 ## First we need to lay down a foundation
 
 @fa[arrow-down]
 
 +++
+@title[A timeline on a custom page]
+## A timeline on a custom page
+CONTENTdm has given site authors the ability to add custom pages.  That's where we want to add our timeline for this demo.  We'll name the file timeline.html and follow the CONTENTdm custom page file format.
+
+<https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/Custom_pages>
+
+@fa[arrow-down]
+
++++
 @title[Source: timeline.html]
+#### Source: timeline.html
 ```
 – – –
 header: false
@@ -84,12 +100,23 @@ title: Timeline Demo
 @[8-15](We then add a little CSS to remove some artifacts)
 @[7](Finally we create a placeholder for our timeline.)
 
+---
+@title[Some more groundwork]
+## More groundwork
+Our next piece will be a custom script that will be loaded in the &lt;head&gt; of our CONTENTdm site from the Custom Scripts option in the WCT global menu.  We'll name ours iiifbootstrap.js
+
+@fa[arrow-down]
+
 +++?code=iiif-timeline/step1/iiifbootstrap.js&lang=javascript&title=Source: Custom JS
 
 @[1-18](A script loader that will inject our JS into the HTML header)
 @[20,26](Then we add our CONTENTdm javascript lifecycle event listener)
 @[21,25](We only want this code to run on our timeline page!)
 @[22-24](For convenience we'll inject the axios library for HTTP requests)
+
+Note:
+- One of the limitations of custom scripts in the WCT is that we only allow one script to be loaded.  We want to load many scripts though which is why we've created this ScriptLoader
+- The axios library works on IE11 whereas fetch() does not
 
 ---
 @title[Creating the IIIF collection manifest]
@@ -103,10 +130,10 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 @[23-33](We create a function to make the JSON object that will be the base of our collection manifest)
 @[35-41](Next we make a small function that will be used to make each of the member JSON objects which will be added to the member array)
 @[31](The member array is in our collection manifest JSON object)
-@[44,51-53](Make an HTTP call to our CONTENTdm dmQuery API to get our items.  This returns a Promise)
+@[44,51-53](Make an HTTP call to our [CONTENTdm dmQuery API](https://www.oclc.org/support/services/contentdm/help/customizing-website-help/other-customizations/contentdm-api-reference/dmquery.en.html) to get our items.  This returns a Promise)
 @[45,51-53](We call the ".then()" method on the Promise. This will execute when the HTTP call is complete)
 @[45-46,51-53](Call our previously created function to make our base collection manifest JSON object)
-@[45-47,49,51-53](Loop through each of the item records that are returned from our CONTENTdm dmQuery API)
+@[45-47,49,51-53](Loop through each of the item records that are returned from our [CONTENTdm dmQuery API](https://www.oclc.org/support/services/contentdm/help/customizing-website-help/other-customizations/contentdm-api-reference/dmquery.en.html))
 @[45-49,51-53](Call the createMember method on each record and add it to the manifest member array)
 
 +++
