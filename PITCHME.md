@@ -17,10 +17,22 @@
 ## You have a story to tell!
 One of the more popular requested customizations is a timeline using your CONTENTdm data.
 
++++
+
+@title[Overview]
+## An overview
+@ul[squares]
+- Prepare the content
+- Identify a set of items
+- Build a custom page container
+- Include some "helper" scripts
+- Put it together
+@ulend
+
 ---
 
 @title[Grooming Your Content]
-## A metadata interlude
+## It starts with metadata
 Your record descriptions will drive this timeline.
 
 +++
