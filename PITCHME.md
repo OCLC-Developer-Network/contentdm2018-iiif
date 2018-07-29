@@ -50,7 +50,7 @@ Your record descriptions will drive this timeline.
 
 @title[Ordering the Sneaky Way]
 ## Force the order with a dedicated field
-Create a **Timeline Sequence** field to have complete control over the slide order.
+Create a @color[yellow](**Timeline Sequence**) field to have complete control over the slide order.
 
 +++
 
