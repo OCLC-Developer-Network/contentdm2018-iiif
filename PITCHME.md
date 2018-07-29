@@ -26,7 +26,7 @@ One of the more popular requested customizations is a timeline using your CONTEN
 - Identify a set of items
 - Build a custom page container
 - Include some "helper" scripts
-- Put it together
+- Put it all together
 @ulend
 
 ---
