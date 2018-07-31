@@ -61,14 +61,8 @@ We used content from their **Destination Indiana** portal for this demo and they
 ---
 
 @title[CONTENTdm and IIIF]
-## CONTENTdm brings IIIF support
-Within the past year we have been excited to bring every hosted CONTENTdm site IIIF functionality "baked in"
-
----
-
-@title[CONTENTdm and IIIF]
 ## We need Collection manifests
-But there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs
+... there is a gap currently that we will address with the help of Javascript, IIIF and CONTENTdm APIs today
 
 <http://iiif.io/api/presentation/2.0/#collections>
 
@@ -191,11 +185,11 @@ Our hard work is paying off now.  We just have a few more things to do in order 
 @[114-118,125](We create a TimelineJS JSON object with a title slide and an empty events array)
 @[58-73](Let's create a function to convert an item manifest into a TimelineJS event)
 @[62](In this method we see a call to another helper function I created to update the a IIIF image URL)
-@[75,89](It's a simple function that takes as input a URL, the part of the URL we want to change, and the new value)
-@[58-73](Going back to our function that converts a item manifest into a TimelineJS event there is mention of this other method)
+@[75-89](It's a simple function that takes as input a URL, the part of the URL we want to change, and the new value)
+@[58-73](Going back to our function that converts a item manifest into a TimelineJS event there is mention of another unfamiliar method)
 @[66,69-70](It's this getMetadata function, let's see what that's about)
 @[47-56](It will loop through a IIIF Item manifest and find the metadata we're interested in and return it)
-@[114,120-121,123,125](Here we will use that function to convert each IIIF manifest into a single timeline event)
+@[114,120-121,123,125](Here we will use convertToEvent to convert each IIIF manifest into a single timeline event)
 @[114,120-123,125](Then we push each event into our TimelineJS JSON event array)
 @[124](Success is ours! We can call our TimelineJS code snippit and pass in our carefully constructed Timeline JS JSON object)
 
