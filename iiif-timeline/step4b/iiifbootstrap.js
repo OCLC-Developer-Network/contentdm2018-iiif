@@ -22,7 +22,8 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
         /*
         * Main execution
         */
-        ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
+       ScriptLoader('https://cdn.jsdelivr.net/npm/url-polyfill@1.0.13/url-polyfill.min.js', function() {
+          ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
             ScriptLoader('https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js', function(){
                 ScriptLoader('https://cdm15717.contentdm.oclc.org/customizations/global/pages/js/iiif-tools.js', function(){
                     let cssFileRef = document.createElement("link");
@@ -60,6 +61,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
                     });
                 });
             });
-        });
+          });
+       });
     }
 });

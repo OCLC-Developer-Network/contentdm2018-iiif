@@ -38,7 +38,8 @@
         return {
             'media' : {
                 'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', '725,'),
-                'credit' : itemManifest.attribution['@value']
+                'credit' : itemManifest.attribution['@value'],
+                'link' : 'https://cdm15717.contentdm.oclc.org/digital/collection/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
             },
             'start_date' : {
                 'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear()
@@ -64,4 +65,10 @@
         }
         url.pathname = urlParts.join('/');
         return url.href;
+    }
+
+    let getUrlPart = function(inurl, pathIndex) {
+        let url = new URL(iiifUrl);
+        let urlParts = url.pathname.split('/');
+        return urlParts[pathIndex];
     }
