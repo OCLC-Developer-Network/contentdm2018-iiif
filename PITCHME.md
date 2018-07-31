@@ -181,7 +181,7 @@ Now that we have a blank slate to work from and a helpful Javascript HTTP client
 ---
 @title[Finally a timeline]
 ## Finally a timeline
-Our hard work is paying off now.  We just have a few more things to do in order to get our timeline embedded into our custom page.
+Our hard work is paying off now.  We just have a few more things to do in order to get our timeline embedded into our custom page.  We'll use the fantastic TimelineJS from https://timeline.knightlab.com
 
 ![Knightlab](iiif-timeline/images/knightlab-dark.png)
 
@@ -189,7 +189,12 @@ Our hard work is paying off now.  We just have a few more things to do in order 
 @[95](First thing's first.  We need to add one more ScriptLoader to pull in the TimelineJS library)
 @[96-100](We also want to inject the TimelineJS CSS file into the <head> of our document)
 @[114-118,125](We create a TimelineJS JSON object with a title slide and an empty events array)
-@[59-73](Recall we created a function to convert an item manifest into a TimelineJS event)
+@[58-73](Let's create a function to convert an item manifest into a TimelineJS event)
+@[62](In this method we see a call to another helper function I created to update the a IIIF image URL)
+@[75,89](It's a simple function that takes as input a URL, the part of the URL we want to change, and the new value)
+@[58-73](Going back to our function that converts a item manifest into a TimelineJS event there is mention of this other method)
+@[66,69-70](It's this getMetadata function, let's see what that's about)
+@[47-56](It will loop through a IIIF Item manifest and find the metadata we're interested in and return it)
 @[114,120-121,123,125](Here we will use that function to convert each IIIF manifest into a single timeline event)
 @[114,120-123,125](Then we push each event into our TimelineJS JSON event array)
 @[124](Success is ours! We can call our TimelineJS code snippit and pass in our carefully constructed Timeline JS JSON object)

@@ -20,7 +20,7 @@ function ScriptLoader(url, callback){
 document.addEventListener('cdm-custom-page:ready', function(event) {
     if (event.detail.filename.endsWith('timeline')) {
         ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
-
+            document.getElementById('timeline-embed').innerHTML = "<h1>Hello World!</h1>"
         });
     }
 });
